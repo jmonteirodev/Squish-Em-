@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://johnny.gd" type="Script" id=1]
+[ext_resource path="res://Cenário.tscn" type="PackedScene" id=2]
+[ext_resource path="res://player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Inimigo.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objeto.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Item.tscn" type="PackedScene" id=6]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Cenário" parent="." instance=ExtResource( 2 )]
+
+[node name="player" parent="." instance=ExtResource( 3 )]
+collision_mask = 9
+
+[node name="Inimigos" type="Node" parent="."]
+editor/display_folded = true
+
+[node name="Inimigo" parent="Inimigos" instance=ExtResource( 4 )]
+position = Vector2( 481.547, 217.066 )
+
+[node name="Inimigo8" parent="Inimigos" instance=ExtResource( 4 )]
+position = Vector2( 691.612, 7.00189 )
+
+[node name="Inimigo11" parent="Inimigos" instance=ExtResource( 4 )]
+position = Vector2( 597.753, -162.838 )
+
+[node name="Inimigo2" parent="Inimigos" instance=ExtResource( 4 )]
+position = Vector2( 651.906, 225.417 )
+
+[node name="Inimigo7" parent="Inimigos" instance=ExtResource( 4 )]
+position = Vector2( 861.97, 15.3528 )
+
+[node name="Inimigo12" parent="Inimigos" instance=ExtResource( 4 )]
+position = Vector2( 768.112, -154.487 )
+
+[node name="Inimigo3" parent="Inimigos" instance=ExtResource( 4 )]
+position = Vector2( 289.477, 218.737 )
+
+[node name="Inimigo6" parent="Inimigos" instance=ExtResource( 4 )]
+position = Vector2( 499.541, 8.67212 )
+
+[node name="Inimigo9" parent="Inimigos" instance=ExtResource( 4 )]
+position = Vector2( 405.682, -161.167 )
+
+[node name="Inimigo4" parent="Inimigos" instance=ExtResource( 4 )]
+position = Vector2( 828.945, 225.417 )
+scale = Vector2( 0.470441, 0.446515 )
+
+[node name="Inimigo5" parent="Inimigos" instance=ExtResource( 4 )]
+position = Vector2( 1039.01, 15.3528 )
+scale = Vector2( 0.470441, 0.446515 )
+
+[node name="Inimigo10" parent="Inimigos" instance=ExtResource( 4 )]
+position = Vector2( 945.151, -154.487 )
+scale = Vector2( 0.470441, 0.446515 )
+
+[node name="Objetos" type="Node" parent="."]
+
+[node name="Objeto" parent="Objetos" instance=ExtResource( 5 )]
+position = Vector2( 222.687, -748.203 )
+
+[node name="Item" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1289.09, -385.785 )
